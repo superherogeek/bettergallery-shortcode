@@ -1,0 +1,147 @@
+/*!
+ *  Better Gallery [shortcode]
+ *  Replace the WordPress Gallery with something just a bit better.
+ *  -------------------------------------------------------
+ *  Usage examples and documentation be found at: 
+ *	http://onesmallpixel.com/plugin/better-gallery-shortcode/
+ *
+ *  Style is Based on yogaCSS by Jordan Roberts @ yogacss.com
+ *
+ *  Contact
+ *  -------------------------------------------------------
+ *  Twitter: http://twitter.com/superherogeek
+ *  onesmallpixel.com
+ */
+ 
+/**
+ * GLOBAL styles 
+ */
+.osp-bg-yoga {
+	position: relative;
+}
+
+#osp-bettergallery {
+	padding:0;
+	margin:0;
+}
+	
+#osp-bettergallery img {
+	width: 100%;
+	max-width: 100%;
+}
+
+.osp-bg-caption {
+	background-color: #333;
+	font-size: 12px;
+	line-height: 16px;
+	padding: 10px;
+	margin-top: -10px;
+}
+
+.img-container {
+	width:auto;
+}
+
+.right-nav {
+	position: absolute;
+	right: 0;
+	padding: 2.2%;
+	background-color: #000;
+	top: 0;
+	height: 90%;
+}
+
+.left-nav {
+	position: absolute;
+	left: 0;
+	padding: 2.2%;
+	background-color: #000;
+	top: 0;
+	height: 90%;
+}
+
+.right-nav span, .left-nav span {
+	position: relative;
+	top: 47.2%;
+}
+
+/**
+ * Micro Clearfix
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.osp-img .cf {
+	*zoom: 1;
+}
+
+
+/*----------------------------*/	
+/* Flexible Grid ------------ */
+
+/* Container */
+.osp-gal-container {
+	margin:0 auto;
+	width: 93.75%; /* (960px) / 1024 => 1024w x 768h is a common screen resolution */
+	padding-top: 1.04166666667%; /* (10px)/960 (10px)/960 */
+	text-align: left;
+}
+	
+/* Margins */
+
+.osp-gal-1-of-1, .osp-gal-1-of-2, .osp-gal-1-of-3, 
+.osp-gal-1-of-4, .osp-gal-1-of-5, .osp-gal-1-of-6 {
+	margin: 0 1.04166666667%; /* 0px (10px)/960 (10px)/960 (10px)/960 */
+	margin-bottom:1.04166666667%;
+	float:left;
+}
+
+/* Columns */
+.osp-gal-1-of-1 {
+	width: 97.9166666667%; /* (60px) / 960 = */
+}
+
+.osp-gal-1-of-2 {
+	width: 47.9166666667%; /* (60px) / 960 = */
+}
+
+.osp-gal-1-of-3 {
+	width: 31.25%; /* (60px) / 960 = */
+}
+
+.osp-gal-1-of-4 {
+	width: 22.9166666667%; /* (60px) / 960 = */
+}
+
+.osp-gal-1-of-5 {
+	width: 17.9166666667%; /* (60px) / 960 = */
+}
+
+.osp-gal-1-of-6 {
+	width: 14.5833333333%; /* (60px) / 960 = */
+}
+		
+/*------------------------------------*/		
+/* iPhones and Other Phones at 400px */
+@media only screen and (max-width : 480px) {
+
+	/* Add Horizontal Scroll */
+		.osp-gal-container {
+			overflow-y: hidden;
+			overflow-x: scroll;
+			width: auto;
+		}
+}
